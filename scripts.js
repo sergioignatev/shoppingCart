@@ -24,7 +24,8 @@ function myF(){
     function rem(){
         let completed=document.getElementsByClassName("btn-success")
         for(let i=0;i<completed.length;i++){
-            completed[i].parentElement.remove()
+            completed[i].parentElement.style.display="none"
+            
             
         }
     }
