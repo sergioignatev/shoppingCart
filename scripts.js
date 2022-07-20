@@ -1,7 +1,7 @@
 function myF(){
     let inp=document.getElementById("input").value;
     document.getElementById('input').value = ''
-    document.getElementById("demo").innerHTML +=`<li class="mt-3" ondblclick="d(this)" >${inp} <button class="btn btn-danger" onclick="complete(this)" >Куплено?</button></li>`}
+    document.getElementById("demo").innerHTML +=`<li class="btn btn-light" class="mt-5" ondblclick="d(this)" >${inp} <button class="btn btn-danger" onclick="complete(this)" >Куплено?</button></li><br>`}
     
     function d(x){
     var display=""
@@ -19,11 +19,13 @@ function myF(){
       x.innerHTML="✓ Куплено"
       x.classList.add("btn-success")
       x.classList.remove("btn-danger")
+      x.parentElement.classList.add("btn btn-success")
     }
     function rem(){
         let completed=document.getElementsByClassName("btn-success")
         for(let i=0;i<completed.length;i++){
-            completed[i].parentElement.style.display="none"
+            completed[i].parentElement.remove()
+            
         }
     }
     function deleteAll(){
