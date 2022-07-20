@@ -1,7 +1,7 @@
 function myF(){
     let inp=document.getElementById("input").value;
     document.getElementById('input').value = ''
-    document.getElementById("demo").innerHTML +=`<li class="btn btn-light" class="mt-5" ondblclick="d(this)" >${inp} <button class="btn btn-danger" onclick="complete(this)" >Куплено?</button></li><br>`}
+    document.getElementById("demo").innerHTML +=`<li class="btn btn-light" class="mt-5" ondblclick="d(this)" >${inp} <button class="btn btn-danger" onclick="complete(this)" >Куплено?</button></li>`}
     
     function d(x){
     var display=""
