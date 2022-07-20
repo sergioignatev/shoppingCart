@@ -1,7 +1,8 @@
 function myF(){
     let inp=document.getElementById("input").value;
     document.getElementById('input').value = ''
-    document.getElementById("demo").innerHTML +=`<li class="btn btn-light" class="mt-5" ondblclick="d(this)" >${inp} <button class="btn btn-danger" onclick="complete(this)" >Куплено?</button></li>`}
+    let addItem=`<li class="btn btn-light" class="mt-5" ondblclick="d(this)" >${inp} <button class="btn btn-danger" onclick="complete(this)" >Куплено?</button></li>`
+    document.getElementById("demo").innerHTML +=addItem}
     
     function d(x){
     var display=""
@@ -13,7 +14,7 @@ function myF(){
     
     
     x.style.display=display;
-    x.style.height="10px"
+   
     }
     function complete(x){
       x.innerHTML="✓ Куплено"
