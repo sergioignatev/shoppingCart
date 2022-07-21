@@ -1,3 +1,4 @@
+
 function myF(){
     let inp=document.getElementById("input").value;
     document.getElementById('input').value = ''
@@ -11,10 +12,7 @@ function myF(){
     }else{
     display=""
     }
-    
-    
     x.style.display=display;
-   
     }
     function complete(x){
       x.innerHTML="✓ Куплено"
@@ -22,6 +20,7 @@ function myF(){
       x.classList.remove("btn-danger")
       x.parentElement.classList.add("btn btn-success")
     }
+   
     function rem(){
         let completed=document.getElementsByClassName("btn-success")
         for(let i=0;i<completed.length;i++){
@@ -30,9 +29,29 @@ function myF(){
             
         }
     }
+    
     function deleteAll(){
         if(confirm('Удалить все?')){
-            document.getElementById("demo").innerHTML=""
+            document.getElementById("demo").innerHTML="";
+            
         }
         else{}
     }
+
+  setInterval(miF,1)
+  
+   function miF(){
+    let storage=""
+let aa=document.getElementById("demo").innerHTML;
+if(aa!==""){
+    storage=aa
+}
+else{
+storage=localStorage.getItem("items")
+}
+localStorage.setItem("items",storage);
+
+   }
+   document.getElementById("demo").innerHTML=localStorage.getItem('items')
+
+    
